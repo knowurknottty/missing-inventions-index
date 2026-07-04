@@ -1,4 +1,4 @@
-# The Missing Inventions Index
+# The Missing Inventions Index v2.0
 
 **Authors:** Knowurknottty and bioCAPTv3
 **Affiliation:** Inversion Labs
@@ -17,32 +17,86 @@ Instead of cataloging inventions, we catalog **gaps**:
 - Here are the constraints
 - Anyone may attempt to solve it
 
-Think of it as a research roadmap for humanity's hardest problems.
+This is not a wish list. Every entry has quantified metrics, falsification criteria, dependency graphs, and cross-domain synthesis. It is designed to be **actionable** -- not inspirational.
 
 ---
 
 ## How to Use This
 
 1. **Find a problem** that interests you
-2. **Read the constraints** -- understand why it is hard
-3. **Check existing attempts** -- see what has been tried
-4. **Propose a solution** -- open a PR or issue
-5. **Document your results** -- success or failure, both are valuable
+2. **Read the metrics** -- understand priority and difficulty
+3. **Check the dependency graph** -- see what this unlocks
+4. **Read the falsification criteria** -- know when to stop
+5. **Propose a solution** -- open a PR or issue
+6. **Document your results** -- success or failure, both are valuable
 
 ---
 
-## Categories
+## Metrics Reference
 
-### 1. Energy
-### 2. Water
-### 3. Food
-### 4. Health
-### 5. Housing
-### 6. Transportation
-### 7. Communication
-### 8. Environment
-### 9. Education
-### 10. Computing
+| Metric | Description |
+|--------|-------------|
+| **Global Impact** | People or industries affected (millions/billions) |
+| **Difficulty** | Engineering challenge (1-10, 10 = hardest) |
+| **Cost to Prototype** | Rough budget for first proof |
+| **Time Horizon** | Months/years to first proof |
+| **Scientific Risk** | How much depends on unknown science (1-10) |
+| **Engineering Risk** | How much depends on execution (1-10) |
+| **Evidence Score** | Strength of supporting literature (1-10) |
+| **Readiness** | Hypothesis / Simulation / Prototype / Demonstrated |
+
+---
+
+## Technology Dependency Graph
+
+```
+RTS (Room-Temp Superconductor)
+│
+├── Grid-Scale Storage (MI-001)
+│   ├── Autonomous Agriculture
+│   ├── Green Hydrogen
+│   ├── Disaster Recovery
+│   └── Water-Positive Cities
+│
+├── Zero-Field MRI (MI-009)
+│   ├── Global Diagnostic Access
+│   ├── Cancer Screening at Scale
+│   └── Neurological Research
+│
+├── Desalination (MI-004)
+│   ├── Autonomous Agriculture
+│   ├── Green Hydrogen
+│   ├── Disaster Recovery
+│   └── Water-Positive Cities
+│
+├── Room-Temp Quantum Computing (MI-020)
+│   ├── Drug Discovery
+│   ├── Materials Science
+│   ├── Cryptography
+│   └── Climate Modeling
+│
+├── Solar 60% (MI-002)
+│   ├── Desalination (power source)
+│   ├── Grid-Scale Storage (charge source)
+│   └── Off-Grid Infrastructure
+│
+├── Protein $0.10/kg (MI-006)
+│   ├── Food Security
+│   ├── Deforestation Reduction
+│   └── Water Conservation
+│
+├── Housing $1K (MI-011)
+│   ├── Disaster Recovery
+│   ├── Urbanization
+│   └── Space Habitats
+│
+└── 1 Exaflop at 1W (MI-021)
+    ├── AI for Science
+    ├── Autonomous Systems
+    └── Edge Computing
+```
+
+**Key insight:** RTS is the root node. Most other gaps depend on it or become easier with it.
 
 ---
 
@@ -54,22 +108,42 @@ Think of it as a research roadmap for humanity's hardest problems.
 
 **Current best:** Lithium-ion batteries ($150/kWh, 10-year lifespan, fire risk).
 
+**Metrics:**
+
+| Metric | Value |
+|--------|-------|
+| Global Impact | 8 billion (energy access for all) |
+| Difficulty | 9/10 |
+| Cost to Prototype | $10-50M |
+| Time Horizon | 5-10 years |
+| Scientific Risk | 7/10 |
+| Engineering Risk | 8/10 |
+| Evidence Score | 6/10 |
+| Readiness | Hypothesis |
+
 **Why existing solutions fail:**
 - Lithium is scarce (concentrated in 3 countries)
 - Batteries degrade (50% capacity loss in 10 years)
 - Fire risk (thermal runaway)
 - Environmental damage (mining, disposal)
 
-**Constraints:**
-- Must store >1 GWh
-- Must last >20 years
-- Must cost <$50/kWh
-- Must be non-flammable
-- Must use abundant materials
+**Why it hasn't been solved:**
+- **Economic:** Lithium industry has $50B+ invested in current tech
+- **Physics:** Energy density of chemical storage has fundamental limits
+- **Manufacturing:** Gigafactory scale required for cost reduction
+- **Regulatory:** Grid storage standards assume lithium
+- **Incentives:** Utilities are risk-averse, slow to adopt
+- **Tooling gaps:** No materials discovery pipeline for grid-scale alternatives
 
-**Status:** OPEN -- no solution meets all constraints.
+**Falsification criteria:**
+This idea fails if: (1) no material achieves >1000 Wh/kg at <$50/kWh, OR (2) cycle life <10,000 cycles at 80% capacity, OR (3) thermal runaway risk cannot be eliminated.
 
-**Attempts:** Pumped hydro (geographically limited), compressed air (low efficiency), flow batteries (low energy density).
+**Cross-domain synthesis:**
+- Could biology solve this? -- Flow batteries use organic molecules (quines)
+- Could materials science remove the bottleneck? -- RTS magnetic storage, metal-air batteries
+- Could AI reduce design costs? -- Yes, GNoME-style screening of 381K materials
+
+**Convergence:** Multiple teams (Form Energy iron-air, ESS iron flow, Ambri liquid metal) converging on earth-abundant materials. Independent rediscovery suggests the lithium paradigm is reaching its limits.
 
 ---
 
@@ -79,20 +153,39 @@ Think of it as a research roadmap for humanity's hardest problems.
 
 **Current best:** Multi-junction cells (47%, $100,000/m2).
 
+**Metrics:**
+
+| Metric | Value |
+|--------|-------|
+| Global Impact | 8 billion (clean energy) |
+| Difficulty | 8/10 |
+| Cost to Prototype | $5-20M |
+| Time Horizon | 3-7 years |
+| Scientific Risk | 6/10 |
+| Engineering Risk | 7/10 |
+| Evidence Score | 7/10 |
+| Readiness | Simulation |
+
 **Why existing solutions fail:**
 - Multi-junction cells are too expensive for mass deployment
 - Single-junction cells hit Shockley-Queisser limit (33%)
 - Tandem cells add complexity and cost
 
-**Constraints:**
-- Must achieve 60% efficiency
-- Must cost <$0.50/watt
-- Must be mass-producible
-- Must last >25 years
+**Why it hasn't been solved:**
+- **Physics:** Shockley-Queisser limit is fundamental for single junction
+- **Manufacturing:** Multi-junction epitaxy is expensive
+- **Economics:** Cost per watt matters more than efficiency
+- **Incentives:** 22% panels are "good enough" for current markets
 
-**Status:** OPEN -- theoretical limit may be ~60% for multi-junction.
+**Falsification criteria:**
+This idea fails if: (1) no multi-junction approach achieves 60% at <$1/watt, OR (2) thermalization losses cannot be reduced below 20%, OR (3) tandem architectures hit practical complexity limits.
 
-**Attempts:** Perovskite-silicon tandem (33%), organic PV (18%), quantum dot (18%).
+**Cross-domain synthesis:**
+- Could biology solve this? -- Photosynthesis achieves 30% in nature
+- Could AI reduce design costs? -- Yes, optimization of layer thicknesses and compositions
+- Could materials science remove the bottleneck? -- Perovskite stacking, quantum dot harvesting
+
+**Convergence:** Oxford PV, Caelux, and others converging on perovskite-silicon tandems. Efficiency climbing 1-2% per year.
 
 ---
 
@@ -102,20 +195,37 @@ Think of it as a research roadmap for humanity's hardest problems.
 
 **Current best:** Pd-Ni-P metallic glass (our work, Tc ~300K at ambient pressure -- kinetic trapping).
 
+**Metrics:**
+
+| Metric | Value |
+|--------|-------|
+| Global Impact | 8 billion (enables everything) |
+| Difficulty | 10/10 |
+| Cost to Prototype | $1-10M |
+| Time Horizon | 2-5 years |
+| Scientific Risk | 9/10 |
+| Engineering Risk | 6/10 |
+| Evidence Score | 4/10 |
+| Readiness | Hypothesis |
+
 **Why existing solutions fail:**
 - Hydrides require >100 GPa pressure
 - Cuprates require liquid nitrogen cooling
 - All existing solutions are expensive or impractical
 
-**Constraints:**
-- Must operate at room temperature (20-30C)
-- Must operate at ambient pressure (<1 atm)
-- Must be synthesizable at scale
-- Must cost <$100/kg
+**Why it hasn't been solved:**
+- **Physics:** Electron-phonon coupling is weak at ambient conditions
+- **Manufacturing:** Metastable phases are hard to synthesize
+- **Tooling gaps:** No high-throughput superconductor screening
 
-**Status:** IN PROGRESS -- Pd-Ni-P shows promise.
+**Falsification criteria:**
+This idea fails if: (1) kinetic trapping cannot stabilize high-Tc phases, OR (2) Pd-Ni-P system cannot achieve Tc >350K, OR (3) synthesis is not reproducible across labs.
 
-**Attempts:** Our kinetic trapping method, hydride quenching, ionic oxide design.
+**Cross-domain synthesis:**
+- Could AI reduce design costs? -- Yes, GNoME screening
+- Could materials science remove the bottleneck? -- Ionic oxide theory (2025) provides new roadmap
+
+**Convergence:** Multiple groups (Cao et al., Dias retracted, our work) independently exploring metallic glasses. The field is converging on metastable synthesis as the path.
 
 ---
 
@@ -127,21 +237,40 @@ Think of it as a research roadmap for humanity's hardest problems.
 
 **Current best:** Reverse osmosis ($0.50/m3).
 
+**Metrics:**
+
+| Metric | Value |
+|--------|-------|
+| Global Impact | 2 billion |
+| Difficulty | 8/10 |
+| Cost to Prototype | $5-20M |
+| Time Horizon | 3-5 years |
+| Scientific Risk | 5/10 |
+| Engineering Risk | 8/10 |
+| Evidence Score | 7/10 |
+| Readiness | Prototype |
+
 **Why existing solutions fail:**
 - RO requires high pressure (60-80 bar) -- energy-intensive
 - Membranes foul and need replacement
 - Brine disposal damages ecosystems
 
-**Constraints:**
-- Must produce drinkable water
-- Must cost <$0.01/liter
-- Must work in arid regions (no freshwater source)
-- Must be solar-powered
-- Must last >5 years without maintenance
+**Why it hasn't been solved:**
+- **Physics:** Thermodynamic minimum energy for desalination is 0.3 kWh/m3
+- **Manufacturing:** Membrane production is energy-intensive
+- **Economics:** Energy cost dominates operational cost
+- **Incentives:** Water utilities are publicly funded, slow to innovate
+- **Tooling gaps:** No membrane material achieves theoretical efficiency
 
-**Status:** OPEN -- no solution meets all constraints.
+**Falsification criteria:**
+This idea fails if: (1) no membrane achieves <0.3 kWh/m3, OR (2) membrane lifetime <5 years, OR (3) brine disposal cannot be solved.
 
-**Attempts:** RO ($0.50/m3), solar stills (slow), atmospheric water generators (energy-intensive).
+**Cross-domain synthesis:**
+- Could biology solve this? -- Aquaporins (biological water channels) are 1000x more efficient
+- Could materials science remove the bottleneck? -- Graphene membranes, MOF membranes
+- Could AI reduce design costs? -- Yes, optimization of membrane structure
+
+**Convergence:** Desalinate, Gradiant, and others converging on next-gen membranes. Cost declining 5-10% per year.
 
 ---
 
@@ -151,20 +280,38 @@ Think of it as a research roadmap for humanity's hardest problems.
 
 **Current best:** Geophysical survey ($50,000, takes months).
 
+**Metrics:**
+
+| Metric | Value |
+|--------|-------|
+| Global Impact | 300 million |
+| Difficulty | 7/10 |
+| Cost to Prototype | $1-5M |
+| Time Horizon | 1-3 years |
+| Scientific Risk | 4/10 |
+| Engineering Risk | 7/10 |
+| Evidence Score | 5/10 |
+| Readiness | Hypothesis |
+
 **Why existing solutions fail:**
 - Geophysical surveys are too expensive for rural use
 - Satellite imaging lacks resolution
 - No portable, affordable solution exists
 
-**Constraints:**
-- Must detect water through 500m of rock
-- Must cost <$5,000
-- Must work in 1 day
-- Must achieve >90% drilling success rate
+**Why it hasn't been solved:**
+- **Physics:** Electromagnetic signals attenuate in rock
+- **Manufacturing:** SQUID sensors require cryogenic cooling
+- **Economics:** No market incentive for affordable detection
+- **Incentives:** NGOs fund wells, not detection
 
-**Status:** OPEN -- our SQUID Array (Invention 5) may address this.
+**Falsification criteria:**
+This idea fails if: (1) no sensor achieves 500m depth at <$5,000, OR (2) resolution is insufficient to distinguish water-bearing layers.
 
-**Attempts:** Magnetotelluric survey (expensive), ground-penetrating radar (limited depth).
+**Cross-domain synthesis:**
+- Could biology solve this? -- Some animals detect underground water
+- Could semiconductor advances enable it? -- Yes, RTS SQUID arrays
+
+**Convergence:** Zond and others using magnetotellurics. Cost declining but still too high.
 
 ---
 
@@ -176,21 +323,40 @@ Think of it as a research roadmap for humanity's hardest problems.
 
 **Current best:** Plant-based protein ($2-5/kg).
 
+**Metrics:**
+
+| Metric | Value |
+|--------|-------|
+| Global Impact | 8 billion |
+| Difficulty | 9/10 |
+| Cost to Prototype | $20-100M |
+| Time Horizon | 5-10 years |
+| Scientific Risk | 7/10 |
+| Engineering Risk | 8/10 |
+| Evidence Score | 4/10 |
+| Readiness | Hypothesis |
+
 **Why existing solutions fail:**
 - Animal protein is too expensive and resource-intensive
 - Plant-based protein lacks complete amino acid profile
 - Cultured meat is too expensive ($10,000/kg)
 
-**Constraints:**
-- Must cost <$0.10/kg
-- Must provide complete amino acid profile
-- Must be producible anywhere
-- Must use <10% of water vs animal protein
-- Must use <10% of land vs animal protein
+**Why it hasn't been solved:**
+- **Physics:** Protein synthesis requires energy and precursors
+- **Manufacturing:** Bioreactors are expensive
+- **Economics:** Scale requires massive capital
+- **Regulatory:** Novel proteins face safety hurdles
+- **Incentives:** Meat industry resists alternatives
 
-**Status:** OPEN -- no solution meets all constraints.
+**Falsification criteria:**
+This idea fails if: (1) no production method achieves <$0.10/kg at scale, OR (2) nutritional quality cannot match animal protein, OR (3) consumer acceptance is too low.
 
-**Attempts:** Soy protein ($2/kg), pea protein ($3/kg), cultured meat ($10,000/kg).
+**Cross-domain synthesis:**
+- Could biology solve this? -- Precision fermentation, single-cell protein
+- Could swarm intelligence solve it? -- Decentralized small-scale production
+- Could AI reduce design costs? -- Optimization of fermentation conditions
+
+**Convergence:** Perfect Day, Solar Foods, and others converging on fermentation-based protein. Cost declining but still 10-50x target.
 
 ---
 
@@ -200,21 +366,40 @@ Think of it as a research roadmap for humanity's hardest problems.
 
 **Current best:** GMO + pesticide intensive farming.
 
+**Metrics:**
+
+| Metric | Value |
+|--------|-------|
+| Global Impact | 2 billion (farmers) |
+| Difficulty | 8/10 |
+| Cost to Prototype | $5-20M |
+| Time Horizon | 5-10 years |
+| Scientific Risk | 6/10 |
+| Engineering Risk | 7/10 |
+| Evidence Score | 5/10 |
+| Readiness | Simulation |
+
 **Why existing solutions fail:**
 - GMO faces public resistance and regulatory barriers
 - Pesticides harm pollinators and human health
 - Organic farming has 20-30% lower yields
 
-**Constraints:**
-- Must increase yield by 50%
-- Must not use GMO
-- Must not use synthetic pesticides
-- Must be affordable for smallholder farmers
-- Must improve soil health
+**Why it hasn't been solved:**
+- **Physics:** Photosynthesis has fundamental efficiency limits
+- **Biology:** Plant genetics are complex
+- **Economics:** GMO seeds are profitable for suppliers
+- **Regulatory:** GMO approval takes 10+ years
+- **Incentives:** Chemical companies profit from pesticides
 
-**Status:** OPEN -- our Pest Deterrent Field (Invention 23) and Crop Nutrient Optimizer (Invention 22) may address this.
+**Falsification criteria:**
+This idea fails if: (1) no non-GMO method achieves 50% yield increase, OR (2) pest damage cannot be controlled without chemicals.
 
-**Attempts:** Organic farming (lower yield), integrated pest management (partial solution).
+**Cross-domain synthesis:**
+- Could biology solve this? -- Microbiome engineering, companion planting
+- Could semiconductor advances enable it? -- Magnetic pest deterrence, precision agriculture
+- Could swarm intelligence solve it? -- Decentralized monitoring
+
+**Convergence:** Pivot Bio, Indigo Ag, and others converging on microbiome-based solutions.
 
 ---
 
@@ -224,21 +409,39 @@ Think of it as a research roadmap for humanity's hardest problems.
 
 **Current best:** Cold chain refrigeration ($100B/year infrastructure).
 
+**Metrics:**
+
+| Metric | Value |
+|--------|-------|
+| Global Impact | 2 billion |
+| Difficulty | 7/10 |
+| Cost to Prototype | $1-5M |
+| Time Horizon | 1-3 years |
+| Scientific Risk | 4/10 |
+| Engineering Risk | 6/10 |
+| Evidence Score | 6/10 |
+| Readiness | Prototype |
+
 **Why existing solutions fail:**
 - Refrigeration requires infrastructure that does not exist in 50% of developing countries
 - Ice melts and needs replacement
 - Drying reduces nutritional value
 
-**Constraints:**
-- Must preserve perishable food for 30 days
-- Must work at ambient temperature (20-40C)
-- Must not require electricity
-- Must cost <$100 per unit
-- Must maintain nutritional value
+**Why it hasn't been solved:**
+- **Physics:** Entropy drives spoilage
+- **Manufacturing:** Passive cooling systems are limited
+- **Economics:** Cold chain is profitable in developed countries
+- **Incentives:** Food companies optimize for developed markets
+- **Tooling gaps:** No affordable, long-lasting preservation method exists
 
-**Status:** OPEN -- our Cold Chain Preserver (Invention 29) may address this.
+**Falsification criteria:**
+This idea fails if: (1) no method preserves perishable food for 30 days at ambient temperature, OR (2) cost exceeds $100/unit.
 
-**Attempts:** Hermetic storage (limited to grains), solar drying (reduces nutrition).
+**Cross-domain synthesis:**
+- Could biology solve this? -- Fermentation, natural preservatives
+- Could materials science remove the bottleneck? -- Phase-change materials, superconducting magnetic storage
+
+**Convergence:** Zero Acre Farms, Apeel Sciences, and others converging on novel preservation methods.
 
 ---
 
@@ -250,21 +453,39 @@ Think of it as a research roadmap for humanity's hardest problems.
 
 **Current best:** Portable ultrasound ($5,000-50,000).
 
+**Metrics:**
+
+| Metric | Value |
+|--------|-------|
+| Global Impact | 5 billion |
+| Difficulty | 9/10 |
+| Cost to Prototype | $10-50M |
+| Time Horizon | 5-10 years |
+| Scientific Risk | 8/10 |
+| Engineering Risk | 8/10 |
+| Evidence Score | 4/10 |
+| Readiness | Hypothesis |
+
 **Why existing solutions fail:**
 - MRI requires cryogenic cooling ($100K/year)
 - MRI requires shielded room ($500K)
 - Ultrasound lacks soft tissue contrast
 
-**Constraints:**
-- Must provide MRI-quality imaging
-- Must cost <$500
-- Must weigh <10 kg
-- Must run on battery
-- Must not require trained operator
+**Why it hasn't been solved:**
+- **Physics:** Strong magnetic fields require superconducting magnets
+- **Manufacturing:** Cryogenic systems are complex
+- **Economics:** MRI is profitable at $1M+ price point
+- **Regulatory:** Medical devices face 5-10 year approval
+- **Incentives:** Hospitals invest in high-margin machines
 
-**Status:** OPEN -- our Zero-Field MRI (Invention 2) addresses this.
+**Falsification criteria:**
+This idea fails if: (1) no superconductor achieves sufficient field strength at room temperature, OR (2) signal-to-noise ratio is insufficient for diagnosis.
 
-**Attempts:** Portable ultrasound (limited), handheld MRI prototypes (expensive).
+**Cross-domain synthesis:**
+- Could semiconductor advances enable it? -- Yes, RTS magnets
+- Could AI reduce design costs? -- Yes, compressed sensing, AI reconstruction
+
+**Convergence:** Hyperfine (portable MRI), Promaxo (MRI-guided intervention) converging on lower-cost imaging.
 
 ---
 
@@ -274,20 +495,39 @@ Think of it as a research roadmap for humanity's hardest problems.
 
 **Current best:** Fermentation ($50-100/kg for generic antibiotics).
 
+**Metrics:**
+
+| Metric | Value |
+|--------|-------|
+| Global Impact | 8 billion |
+| Difficulty | 8/10 |
+| Cost to Prototype | $10-50M |
+| Time Horizon | 5-10 years |
+| Scientific Risk | 7/10 |
+| Engineering Risk | 7/10 |
+| Evidence Score | 5/10 |
+| Readiness | Hypothesis |
+
 **Why existing solutions fail:**
 - Fermentation takes weeks
 - Requires expensive bioreactors
 - Limited to naturally occurring compounds
 
-**Constraints:**
-- Must produce antibiotics at <$10/kg
-- Must take <1 day (not weeks)
-- Must work for novel compounds
-- Must be portable (field deployment)
+**Why it hasn't been solved:**
+- **Physics:** Chemical synthesis of complex molecules is hard
+- **Biology:** Natural products are optimized by evolution
+- **Economics:** Fermentation is cheap at scale
+- **Regulatory:** Novel antibiotics face approval hurdles
+- **Incentives:** Low ROI discourages antibiotic development
 
-**Status:** OPEN -- no solution meets all constraints.
+**Falsification criteria:**
+This idea fails if: (1) no synthesis method achieves <$10/kg, OR (2) novel compounds cannot be synthesized faster than fermentation.
 
-**Attempts:** Chemical synthesis (expensive), fermentation (slow).
+**Cross-domain synthesis:**
+- Could biology solve this? -- Synthetic biology, engineered pathways
+- Could AI reduce design costs? -- Yes, retrosynthesis planning
+
+**Convergence:** Phage therapy, antimicrobial peptides, and AI-designed antibiotics converging as alternatives.
 
 ---
 
@@ -299,21 +539,40 @@ Think of it as a research roadmap for humanity's hardest problems.
 
 **Current best:** Tents ($500, last 2 years) and concrete block ($10,000, lasts 50 years).
 
+**Metrics:**
+
+| Metric | Value |
+|--------|-------|
+| Global Impact | 1.6 billion |
+| Difficulty | 7/10 |
+| Cost to Prototype | $1-5M |
+| Time Horizon | 2-5 years |
+| Scientific Risk | 3/10 |
+| Engineering Risk | 7/10 |
+| Evidence Score | 6/10 |
+| Readiness | Prototype |
+
 **Why existing solutions fail:**
 - Tents are temporary and unsafe
 - Concrete requires skilled labor and infrastructure
 - No affordable permanent solution exists
 
-**Constraints:**
-- Must cost <$1,000 per family (4 people)
-- Must last >25 years
-- Must withstand earthquakes and hurricanes
-- Must be buildable by unskilled labor in 1 week
-- Must provide insulation and sanitation
+**Why it hasn't been solved:**
+- **Physics:** Materials must withstand weather and time
+- **Manufacturing:** Local materials vary widely
+- **Economics:** $1,000 is below cost for conventional construction
+- **Regulatory:** Building codes assume conventional materials
+- **Incentives:** Construction industry profits from complexity
+- **Tooling gaps:** No standardized low-cost building system
 
-**Status:** OPEN -- no solution meets all constraints.
+**Falsification criteria:**
+This idea fails if: (1) no material system achieves 25-year lifespan at <$1,000, OR (2) construction cannot be done by unskilled labor in 1 week.
 
-**Attempts:** 3D-printed housing ($10,000+), earthbag ($1,000, limited durability).
+**Cross-domain synthesis:**
+- Could biology solve this? -- Mycelium bricks, earth construction
+- Could swarm intelligence solve it? -- Decentralized, community-led construction
+
+**Convergence:** ICON (3D printing), WikiHouse (open-source construction), and others converging on digital fabrication.
 
 ---
 
@@ -323,21 +582,38 @@ Think of it as a research roadmap for humanity's hardest problems.
 
 **Current best:** Fiberglass insulation ($0.50/sq ft, R-3.5 per inch).
 
+**Metrics:**
+
+| Metric | Value |
+|--------|-------|
+| Global Impact | 2.4 billion |
+| Difficulty | 6/10 |
+| Cost to Prototype | $500K-2M |
+| Time Horizon | 1-2 years |
+| Scientific Risk | 2/10 |
+| Engineering Risk | 5/10 |
+| Evidence Score | 7/10 |
+| Readiness | Prototype |
+
 **Why existing solutions fail:**
 - Fiberglass requires installation skill
 - Spray foam requires equipment
 - No affordable, easy-to-install solution exists
 
-**Constraints:**
-- Must achieve R-50
-- Must cost <$0.10/sq ft
-- Must be installable by unskilled labor
-- Must not require special equipment
-- Must use abundant materials
+**Why it hasn't been solved:**
+- **Physics:** Low thermal conductivity requires porous structure
+- **Manufacturing:** Aerogel production is expensive
+- **Economics:** R-50 requires 14 inches of fiberglass
+- **Incentives:** Insulation industry optimizes for developed markets
 
-**Status:** OPEN -- no solution meets all constraints.
+**Falsification criteria:**
+This idea fails if: (1) no material achieves R-50 at <$0.10/sq ft, OR (2) installation requires skilled labor.
 
-**Attempts:** Fiberglass (skill required), cellulose (limited R-value), aerogel ($25/sq ft).
+**Cross-domain synthesis:**
+- Could materials science remove the bottleneck? -- Aerogels, vacuum insulation panels
+- Could biology solve this? -- Mycelium insulation, straw bale
+
+**Convergence:** biomass insulation, recycled materials converging on lower-cost solutions.
 
 ---
 
@@ -349,21 +625,39 @@ Think of it as a research roadmap for humanity's hardest problems.
 
 **Current best:** eVTOL prototypes ($200K-1M, not yet certified).
 
+**Metrics:**
+
+| Metric | Value |
+|--------|-------|
+| Global Impact | 4 billion (urban) |
+| Difficulty | 9/10 |
+| Cost to Prototype | $50-200M |
+| Time Horizon | 5-10 years |
+| Scientific Risk | 5/10 |
+| Engineering Risk | 9/10 |
+| Evidence Score | 4/10 |
+| Readiness | Hypothesis |
+
 **Why existing solutions fail:**
 - eVTOLs are too expensive for personal use
 - Helicopters cost $1M+ and require pilots
 - No autonomous air taxi exists yet
 
-**Constraints:**
-- Must cost <$50,000
-- Must fly autonomously
-- Must travel 100km range
-- Must be rechargeable in <30 minutes
-- Must be safe (fail-operational)
+**Why it hasn't been solved:**
+- **Physics:** Energy density of batteries limits range
+- **Manufacturing:** Aerospace certification is slow
+- **Economics:** $50,000 target is 10x below current cost
+- **Regulatory:** No framework for autonomous air vehicles
+- **Incentives:** Aerospace industry optimizes for military/commercial
 
-**Status:** OPEN -- no solution meets all constraints.
+**Falsification criteria:**
+This idea fails if: (1) battery energy density cannot exceed 500 Wh/kg, OR (2) autonomous flight certification takes >15 years.
 
-**Attempts:** eVTOL prototypes ($200K+), air taxi concepts (not yet deployed).
+**Cross-domain synthesis:**
+- Could semiconductor advances enable it? -- RTS motors, power electronics
+- Could AI reduce design costs? -- Yes, autonomous flight control
+
+**Convergence:** Joby, Lilium, Archer converging on eVTOL. Cost declining but still far from target.
 
 ---
 
@@ -373,21 +667,39 @@ Think of it as a research roadmap for humanity's hardest problems.
 
 **Current best:** Concorde (retired, Mach 2, $10,000/ticket).
 
+**Metrics:**
+
+| Metric | Value |
+|--------|-------|
+| Global Impact | 1 billion (frequent travelers) |
+| Difficulty | 10/10 |
+| Cost to Prototype | $100M-1B |
+| Time Horizon | 10-20 years |
+| Scientific Risk | 8/10 |
+| Engineering Risk | 9/10 |
+| Evidence Score | 3/10 |
+| Readiness | Hypothesis |
+
 **Why existing solutions fail:**
 - Hypersonic vehicles face thermal protection challenges
 - Sonic boom limits overland flight
 - Fuel consumption is extreme
 
-**Constraints:**
-- Must achieve Mach 5+
-- Must carry 100+ passengers
-- Must cost <$1,000/ticket
-- Must be reusable
-- Must meet noise regulations
+**Why it hasn't been solved:**
+- **Physics:** Mach 5+ generates extreme heat
+- **Manufacturing:** Thermal protection systems are heavy
+- **Economics:** $1,000/ticket is 10x below current cost
+- **Regulatory:** Sonic boom bans over land
+- **Incentives:** Airlines optimize for fuel efficiency, not speed
 
-**Status:** OPEN -- no solution meets all constraints.
+**Falsification criteria:**
+This idea fails if: (1) no thermal protection system survives Mach 5+ for 1000+ cycles, OR (2) sonic boom cannot be mitigated below regulatory limits.
 
-**Attempts:** Boom Supersonic (Mach 1.7, not yet flying), SpaceX Starship (cargo only).
+**Cross-domain synthesis:**
+- Could materials science remove the bottleneck? -- Ceramic matrix composites, RTS superconducting magnets
+- Could AI reduce design costs? -- Yes, aerodynamic optimization
+
+**Convergence:** Boom Supersonic (Mach 1.7), SpaceX Starship (cargo) converging on supersonic/hypersonic.
 
 ---
 
@@ -399,21 +711,39 @@ Think of it as a research roadmap for humanity's hardest problems.
 
 **Current best:** Starlink ($500 terminal, $50/month).
 
+**Metrics:**
+
+| Metric | Value |
+|--------|-------|
+| Global Impact | 3 billion |
+| Difficulty | 7/10 |
+| Cost to Prototype | $10-50M |
+| Time Horizon | 3-5 years |
+| Scientific Risk | 3/10 |
+| Engineering Risk | 7/10 |
+| Evidence Score | 6/10 |
+| Readiness | Prototype |
+
 **Why existing solutions fail:**
 - Starlink is too expensive for poorest populations
 - Cellular requires tower infrastructure
 - No affordable solution exists for remote areas
 
-**Constraints:**
-- Must cost <$50 for terminal
-- Must cost <$5/month for service
-- Must work anywhere on Earth
-- Must support video calls
-- Must be solar-powered
+**Why it hasn't been solved:**
+- **Physics:** Signal propagation limits range
+- **Manufacturing:** Terminals are expensive
+- **Economics:** $5/month is below cost for most providers
+- **Regulatory:** Spectrum allocation is complex
+- **Incentives:** ISPs optimize for profitable markets
 
-**Status:** OPEN -- no solution meets all constraints.
+**Falsification criteria:**
+This idea fails if: (1) no terminal achieves <$50, OR (2) service cost cannot drop below $5/month, OR (3) solar power is insufficient for remote operation.
 
-**Attempts:** Starlink ($500+), LoRa (too slow), mesh networks (limited range).
+**Cross-domain synthesis:**
+- Could semiconductor advances enable it? -- RTS deep-field communication coils
+- Could swarm intelligence solve it? -- Mesh networks, community-owned infrastructure
+
+**Convergence:** Starlink, Project Loon (discontinued), and others converging on satellite-based access.
 
 ---
 
@@ -425,20 +755,39 @@ Think of it as a research roadmap for humanity's hardest problems.
 
 **Current best:** Direct air capture ($200-600/ton).
 
+**Metrics:**
+
+| Metric | Value |
+|--------|-------|
+| Global Impact | 8 billion |
+| Difficulty | 9/10 |
+| Cost to Prototype | $50-200M |
+| Time Horizon | 5-10 years |
+| Scientific Risk | 7/10 |
+| Engineering Risk | 8/10 |
+| Evidence Score | 5/10 |
+| Readiness | Prototype |
+
 **Why existing solutions fail:**
 - DAC is too expensive
 - Tree planting is too slow and limited
 - Ocean fertilization has ecological risks
 
-**Constraints:**
-- Must capture CO2 at <$50/ton
-- Must be scalable to 40 billion tons/year
-- Must not cause ecological harm
-- Must be deployable anywhere
+**Why it hasn't been solved:**
+- **Physics:** CO2 is dilute (420 ppm) -- separating it takes energy
+- **Manufacturing:** DAC plants are expensive
+- **Economics:** $50/ton is below current cost by 4-12x
+- **Incentives:** Carbon credits are worth $20-50/ton
+- **Tooling gaps:** No sorbent material achieves theoretical efficiency
 
-**Status:** OPEN -- no solution meets all constraints.
+**Falsification criteria:**
+This idea fails if: (1) no sorbent achieves <$50/ton at scale, OR (2) energy cost of capture exceeds 100 kWh/ton, OR (3) storage permanence cannot be guaranteed.
 
-**Attempts:** DAC ($200-600/ton), tree planting (limited scale), ocean fertilization (risky).
+**Cross-domain synthesis:**
+- Could biology solve this? -- Algae, enhanced weathering
+- Could materials science remove the bottleneck? -- Metal-organic frameworks, RTS-enabled processes
+
+**Convergence:** Climeworks, Carbon Engineering, and others converging on DAC. Cost declining 10-15% per year.
 
 ---
 
@@ -448,20 +797,39 @@ Think of it as a research roadmap for humanity's hardest problems.
 
 **Current best:** The Ocean Cleanup ($30M system, removes 1% of input).
 
+**Metrics:**
+
+| Metric | Value |
+|--------|-------|
+| Global Impact | 4 billion (coastal populations) |
+| Difficulty | 8/10 |
+| Cost to Prototype | $10-50M |
+| Time Horizon | 5-10 years |
+| Scientific Risk | 5/10 |
+| Engineering Risk | 8/10 |
+| Evidence Score | 5/10 |
+| Readiness | Prototype |
+
 **Why existing solutions fail:**
 - Ocean is too vast for surface cleanup
 - Microplastics are impossible to filter
 - Prevention is more effective than cleanup
 
-**Constraints:**
-- Must remove >50% of ocean plastic
-- Must cost <$1 billion total
-- Must not harm marine life
-- Must work in all ocean conditions
+**Why it hasn't been solved:**
+- **Physics:** Ocean currents distribute plastic globally
+- **Manufacturing:** Cleanup systems are too small
+- **Economics:** No revenue model for ocean plastic
+- **Incentives:** Plastic producers externalize costs
+- **Tooling gaps:** No technology can filter microplastics at scale
 
-**Status:** OPEN -- no solution meets all constraints.
+**Falsification criteria:**
+This idea fails if: (1) no system removes >10% of input plastic, OR (2) microplastic filtration is not technically feasible at scale.
 
-**Attempts:** The Ocean Cleanup (surface only), beach cleanup (local only).
+**Cross-domain synthesis:**
+- Could swarm intelligence solve it? -- Autonomous cleanup vessels
+- Could biology solve this? -- Plastic-eating enzymes (PETase)
+
+**Convergence:** The Ocean Cleanup, Plastic Bank, and others converging on collection and recycling.
 
 ---
 
@@ -473,21 +841,39 @@ Think of it as a research roadmap for humanity's hardest problems.
 
 **Current best:** Khan Academy (free, but requires internet and devices).
 
+**Metrics:**
+
+| Metric | Value |
+|--------|-------|
+| Global Impact | 260 million children |
+| Difficulty | 7/10 |
+| Cost to Prototype | $5-20M |
+| Time Horizon | 3-5 years |
+| Scientific Risk | 3/10 |
+| Engineering Risk | 6/10 |
+| Evidence Score | 6/10 |
+| Readiness | Prototype |
+
 **Why existing solutions fail:**
 - Internet is not available in rural areas
 - Devices are too expensive
 - No curriculum adapts to local language and culture
 
-**Constraints:**
-- Must cost <$1/student/year
-- Must work offline
-- Must be in local language
-- Must cover K-12 curriculum
-- Must not require trained teachers
+**Why it hasn't been solved:**
+- **Physics:** No -- this is a social/economic problem
+- **Manufacturing:** Devices cost $50-100 minimum
+- **Economics:** $1/student/year is below operational cost
+- **Regulatory:** Education standards vary by country
+- **Incentives:** Education industry optimizes for affluent markets
 
-**Status:** OPEN -- no solution meets all constraints.
+**Fascination criteria:**
+This idea fails if: (1) no device achieves <$10, OR (2) curriculum cannot be localized at scale, OR (3) teacher training cannot be automated.
 
-**Attempts:** Khan Academy (requires internet), offline tablets ($50-100/device).
+**Cross-domain synthesis:**
+- Could AI reduce design costs? -- Yes, adaptive learning, automated assessment
+- Could swarm intelligence solve it? -- Community-led education models
+
+**Convergence:** Bridge, Eneza, and others converging on low-cost digital education.
 
 ---
 
@@ -497,21 +883,38 @@ Think of it as a research roadmap for humanity's hardest problems.
 
 **Current best:** Community colleges ($5,000-20,000/year).
 
+**Metrics:**
+
+| Metric | Value |
+|--------|-------|
+| Global Impact | 75 million youth |
+| Difficulty | 7/10 |
+| Cost to Prototype | $5-20M |
+| Time Horizon | 3-5 years |
+| Scientific Risk | 3/10 |
+| Engineering Risk | 6/10 |
+| Evidence Score | 5/10 |
+| Readiness | Hypothesis |
+
 **Why existing solutions fail:**
 - Physical infrastructure is expensive
 - Trained instructors are scarce
 - No scalable virtual training exists
 
-**Constraints:**
-- Must cost <$100/student/year
-- Must work offline
-- Must provide hands-on skills
-- Must be verifiable by employers
-- Must cover high-demand trades
+**Why it hasn't been solved:**
+- **Physics:** Hands-on skills require physical practice
+- **Manufacturing:** VR hardware is expensive
+- **Economics:** $100/student/year is below cost
+- **Incentives:** Training industry profits from physical presence
 
-**Status:** OPEN -- no solution meets all constraints.
+**Falsification criteria:**
+This idea fails if: (1) no virtual method achieves equivalent skill transfer, OR (2) VR hardware costs cannot drop below $50.
 
-**Attempts:** Online courses (no hands-on), VR training (expensive hardware).
+**Cross-domain synthesis:**
+- Could AI reduce design costs? -- Yes, AI tutors, skill assessment
+- Could swarm intelligence solve it? -- Peer learning, mentorship networks
+
+**Convergence:** Coursera, Udacity, and others converging on online credentials.
 
 ---
 
@@ -523,21 +926,38 @@ Think of it as a research roadmap for humanity's hardest problems.
 
 **Current best:** IBM Eagle (127 qubits, requires dilution refrigerator).
 
+**Metrics:**
+
+| Metric | Value |
+|--------|-------|
+| Global Impact | 8 billion (computing for all) |
+| Difficulty | 10/10 |
+| Cost to Prototype | $50-200M |
+| Time Horizon | 10-20 years |
+| Scientific Risk | 9/10 |
+| Engineering Risk | 8/10 |
+| Evidence Score | 2/10 |
+| Readiness | Hypothesis |
+
 **Why existing solutions fail:**
 - Qubit coherence drops exponentially with temperature
 - Dilution refrigerators cost $1M+ and fill a room
 - No room-temperature qubit technology exists
 
-**Constraints:**
-- Must operate at room temperature (20-30C)
-- Must have >1000 qubits
-- Must cost <$100,000
-- Must be rack-mountable
-- Must maintain coherence >1 second
+**Why it hasn't been solved:**
+- **Physics:** Thermal noise destroys quantum coherence
+- **Manufacturing:** Quantum devices require extreme precision
+- **Economics:** $100,000 target is 10x below current cost
+- **Incentives:** Quantum computing is profitable at $1M+ price point
 
-**Status:** OPEN -- our Room-Temp Quantum Processor (Invention 8, held privately) addresses this.
+**Falsification criteria:**
+This idea fails if: (1) no qubit technology achieves >1 second coherence at room temperature, OR (2) error correction overhead makes large-scale computation impossible.
 
-**Attempts:** IBM Eagle (requires cooling), trapped ions (requires vacuum), topological (not yet demonstrated).
+**Cross-domain synthesis:**
+- Could semiconductor advances enable it? -- Yes, RTS Josephson junctions
+- Could materials science remove the bottleneck? -- Topological qubits, NV centers in diamond
+
+**Convergence:** IBM, Google, and others converging on error correction. No room-temperature approach is close.
 
 ---
 
@@ -547,29 +967,116 @@ Think of it as a research roadmap for humanity's hardest problems.
 
 **Current best:** Frontier (1.1 exaflop, 21 MW).
 
+**Metrics:**
+
+| Metric | Value |
+|--------|-------|
+| Global Impact | 8 billion |
+| Difficulty | 10/10 |
+| Cost to Prototype | $100M-1B |
+| Time Horizon | 10-20 years |
+| Scientific Risk | 9/10 |
+| Engineering Risk | 9/10 |
+| Evidence Score | 2/10 |
+| Readiness | Hypothesis |
+
 **Why existing solutions fail:**
 - Current architectures are power-limited
 - Moore's Law is slowing
 - No revolutionary architecture exists
 
-**Constraints:**
-- Must achieve 1 exaflop
-- Must consume <1 watt
-- Must cost <$10,000
-- Must be portable
+**Why it hasn't been solved:**
+- **Physics:** Landauer's principle sets minimum energy per operation
+- **Manufacturing:** Nanoscale transistors face quantum effects
+- **Economics:** Power is the dominant cost in computing
+- **Incentives:** Chip industry optimizes for performance, not efficiency
+- **Tooling gaps:** No architecture achieves >1 TFLOPS/watt
 
-**Status:** OPEN -- no solution meets all constraints.
+**Falsification criteria:**
+This idea fails if: (1) Landauer's principle cannot be circumvented, OR (2) no material achieves >10x energy efficiency of silicon, OR (3) reversible computing is not practical.
 
-**Attempts:** GPU clusters (power-hungry), neuromorphic chips (limited), optical computing (early stage).
+**Cross-domain synthesis:**
+- Could biology solve this? -- Neural networks achieve ~10 TFLOPS/watt
+- Could semiconductor advances enable it? -- RTS interconnects, neuromorphic chips
+- Could AI reduce design costs? -- Yes, AI-designed chips
+
+**Convergence:** BrainChip, Intel Loihi, and others converging on neuromorphic computing. Efficiency improving 10x per decade.
 
 ---
 
-## How to Contribute
+## Retired Myths
 
-1. **Add new gaps** -- open a PR with a new MI-XXX entry
-2. **Update existing gaps** -- add new attempts, update status
-3. **Propose solutions** -- link to your invention or research
-4. **Document failures** -- dead ends are valuable
+These ideas have been convincingly shown to be impractical or physically impossible under current understanding. Rejecting an idea based on evidence is as valuable as advancing one.
+
+### RM-001: Cold Fusion (LENR)
+
+**Original claim:** Deuterium fusion in palladium at room temperature produces excess heat.
+
+**Evidence reviewed:** Multiple replications attempted. No consistent excess heat. No confirmed nuclear products.
+
+**Why it doesn't hold up:** Nuclear fusion requires overcoming Coulomb barrier (1 MeV). Room-temperature palladium cannot provide this energy. All positive results attributed to measurement error.
+
+**What discovery would change this:** Confirmation of nuclear products (helium-3, tritium) in excess heat experiments, with independent replication.
+
+---
+
+### RM-002: Room-Temperature Superconductivity via Diamond Anvil (Retracted Claims)
+
+**Original claim:** Carbonaceous sulfur hydride achieves 287K (14C) at 267 GPa.
+
+**Evidence reviewed:** Original paper retracted. Independent groups failed to reproduce. Key data inconsistencies identified.
+
+**Why it doesn't hold up:** Retraction due to data integrity issues. Independent attempts to reproduce showed no superconductivity at claimed conditions.
+
+**What discovery would change this:** Independent replication with verified data, or new material system achieving similar results.
+
+---
+
+### RM-003: Room-Temperature Superconductivity via LK-99
+
+**Original claim:** Pb9CuPO4 (LK-99) is a room-temperature superconductor at ambient pressure.
+
+**Evidence reviewed:** Multiple independent groups synthesized LK-99. No Meissner effect. Resistivity behavior attributed to Cu2S impurity phase.
+
+**Why it doesn't hold up:** LK-99 is a semiconductor, not a superconductor. Partial levitation is due to ferromagnetism of Cu2S, not Meissner effect.
+
+**What discovery would change this:** Demonstration of zero resistance and Meissner effect in pure phase LK-99, with independent replication.
+
+---
+
+### RM-004: Faster-Than-Light Communication
+
+**Original claim:** Quantum entanglement enables faster-than-light information transfer.
+
+**Evidence reviewed:** No experiment has demonstrated FTL communication. Quantum mechanics respects causality.
+
+**Why it doesn't hold up:** No-cloning theorem prevents copying quantum states. Measurement outcomes are random, cannot encode information.
+
+**What discovery would change this:** Demonstration of controllable quantum state transfer with superluminal velocity, with independent verification.
+
+---
+
+### RM-005: Perpetual Motion Machines
+
+**Original claim:** Devices can produce work without energy input indefinitely.
+
+**Evidence reviewed:** No device has ever achieved net positive energy output. All claims debunked by thermodynamic analysis.
+
+**Why it doesn't hold up:** First and second laws of thermodynamics are well-established. No exception has been found in 200+ years.
+
+**What discovery would change this:** Demonstration of a device that produces >100% efficiency, with independent verification under controlled conditions.
+
+---
+
+### RM-006: Anti-Gravity Devices
+
+**Original claim:** Electromagnetic or gravitational devices can negate gravity without fuel.
+
+**Evidence reviewed:** No experiment has demonstrated gravity manipulation. All claims attributed to measurement error or hoax.
+
+**Why it doesn't hold up:** General relativity predicts no mechanism for gravity cancellation. All "anti-gravity" demonstrations have been debunked.
+
+**What discovery would change this:** Demonstration of measurable gravity reduction by >1%, with independent replication and theoretical explanation.
 
 ---
 
@@ -589,8 +1096,23 @@ Think of it as a research roadmap for humanity's hardest problems.
 | Computing | 2 | 1 | 1 | 0 |
 | **Total** | **21** | **18** | **3** | **0** |
 
+| Retired Myths | Count |
+|---------------|-------|
+| Total | 6 |
+
 ---
 
-*This index is a living document. As solutions emerge, gaps move from OPEN to IN PROGRESS to SOLVED. New gaps are added as humanity's needs evolve.*
+## How to Contribute
+
+1. **Add new gaps** -- open a PR with a new MI-XXX entry
+2. **Update existing gaps** -- add new attempts, update status
+3. **Propose solutions** -- link to your invention or research
+4. **Document failures** -- dead ends are valuable
+5. **Add retired myths** -- ideas that have been disproven
+6. **Update metrics** -- refine evidence scores, readiness levels
+
+---
+
+*This index is a living document. As solutions emerge, gaps move from OPEN to IN PROGRESS to SOLVED. New gaps are added as humanity's needs evolve. Myths are retired as evidence accumulates.*
 
 *Part of the Inversion Labs ecosystem. Built for reproducibility, evidence, and open engineering.*
